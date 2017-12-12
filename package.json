@@ -1,0 +1,16 @@
+{
+  "name": "vobe",
+  "version": "1.0.0",
+  "description": "An auxiliary React-Redux library designed to define the usage of React components.",
+  "main": "vobe.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kyle Uehlein",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "react-redux": "^5.0.6"
+  }
+}
