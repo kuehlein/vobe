@@ -21,18 +21,9 @@ function vobeReducer() {
   // add actions onto reducer, used to dispatch
   else {
     modelTypes.forEach(function(type) {
-
-      reducer[type] = function(componentModel) {
-        var newState = _.cloneDeep(type)
-
-        if (!componentModel || !componentModel.length) throw new Error('There is a model dispatch without any arguments provided. You need to provide your model dispatch with an array of components. A model dispatch is the function returned by a vobeReducer')
-
-        newState.components = componentModel
-
-        return function(actionToDispatch) {
-          if (actionToDispatch) dispatch(actionToDispatch)
-          dispatch(newState)
-        }
+      reducer[type] = function(actionToDispatch) {
+        if (actionToDispatch) dispatch(actionToDispatch)
+        dispatch(type)
       }
     })
 
